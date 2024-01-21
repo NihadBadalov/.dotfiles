@@ -1,0 +1,4 @@
+bin/.local/scripts/_pons/
+zsh/.zcompdump*
+TabNine/
+nvim/.config/nvim/plugin/packer_compiled.lua
