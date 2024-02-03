@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+os="$(uname)"
+echo $os
+
+if [[ "$os" == "Darwin" ]]; then
+  # Change stuff to Mac
+  sed -i '' 's/C-Space/C-n/g' tmux/.config/tmux/tmux.conf
+else
+  # Change stuff to Linux
+  sed -i '' 's/C-n/C-Space/g' tmux/.config/tmux/tmux.conf
+fi
+
+#sed -i '' 's/set-option -g prefix C-n/set-option' tmux/.config/tmux/tmux.conf
