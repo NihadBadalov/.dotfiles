@@ -1,12 +1,14 @@
 #!/usr/bin/env zsh
 os="$(uname)"
 
-if [[ "$os" == "Darwin" ]]; then
-  # Change stuff to Mac
-  sed -i '' 's/C-Space/C-n/g' tmux/.config/tmux/tmux.conf
-else
-  # Change stuff to Linux
-  sed -i '' 's/C-n/C-Space/g' tmux/.config/tmux/tmux.conf
-fi
+# # Commented out because no need for diff keybinds
+# # because of the custom English keyboard on Mac
+# if [[ "$os" == "Darwin" ]]; then
+#   # Change stuff to Mac
+#   sed -i '' 's/C-Space/C-n/g' tmux/.config/tmux/tmux.conf
+# else
+#   # Change stuff to Linux
+#   sed -i '' 's/C-n/C-Space/g' tmux/.config/tmux/tmux.conf
+# fi
 
 echo "Successfully changed configs for $os"
