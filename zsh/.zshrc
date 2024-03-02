@@ -184,3 +184,4 @@ addToPathFront() {
 }
 
 source $HOME/.dotfiles/zsh/.zsh_profile
+alias vim='nvim'
