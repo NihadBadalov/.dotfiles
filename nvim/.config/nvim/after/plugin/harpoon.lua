@@ -10,6 +10,6 @@ vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
 vim.keymap.set("n", "<C-K>", function()
   local file_number = tonumber(vim.fn.input("File number > "), 10)
-  if not file_number then return end 
+  if not file_number then return end
   ui.nav_file(file_number)
 end)
