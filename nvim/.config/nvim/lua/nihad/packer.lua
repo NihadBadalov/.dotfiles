@@ -146,6 +146,8 @@ return require('packer').startup(function(use)
     requires = "nvim-tree/nvim-web-devicons",
   }
 
+  -- Markdown preview
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
 
   -- Automatically set up your configuration after cloning packer.nvim
