@@ -19,7 +19,6 @@ lsp.ensure_installed({
 lsp.nvim_workspace()
 
 local cmp = require('cmp')
-local cmp_action = require('lsp-zero').cmp_action()
 
 -- CMP Config
 local cmp_config = {}
@@ -72,9 +71,8 @@ cmp_config.mapping = cmp.mapping.preset.insert({
 })
 
 cmp_config.sources = cmp.config.sources({
-  { name = 'nvim_lsp',   keyword_length = 1 },
+  { name = 'nvim_lsp' },
   { name = 'codeium' },
-  -- { name = 'cmp_tabnine' },
   { name = 'luasnip' },
 }, {
   { name = 'buffer' },
@@ -104,7 +102,9 @@ cmp_config.sorting = {
   },
 }
 
+
 cmp.setup(cmp_config)
+
 
 
 -- Set configuration for specific filetype.
@@ -120,13 +120,16 @@ cmp.setup.filetype('gitcommit', {
 cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
-    { name = 'buffer' }
+    { name = 'buffer' },
   }
 })
 
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
-  mapping = cmp.mapping.preset.cmdline(),
+  mapping = {
+    ['<Tab>'] = cmp.mapping.complete(),
+    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+  },
   sources = cmp.config.sources({
     { name = 'path' }
   }, {
