@@ -25,7 +25,7 @@ local cmp_config = {}
 
 -- Selects when you write, for example, this.night
 cmp_config.completion = {
-  completeopt = 'menu,menuone',
+  completeopt = 'menu,menuone,noinsert',
 }
 
 -- No idea what this is
@@ -36,7 +36,7 @@ cmp_config.matching = {
 }
 
 cmp_config.performance = {
-  max_view_entries = 50,
+  max_view_entries = 20,
 }
 
 cmp_config.snippet = {
