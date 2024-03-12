@@ -1,3 +1,3 @@
 require("nihad.remap")
 require("nihad.set")
-require("nihad.packer")
+require("nihad.lazy_init")
