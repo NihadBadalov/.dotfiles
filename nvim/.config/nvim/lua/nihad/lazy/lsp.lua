@@ -32,7 +32,6 @@ return {
       },
       handlers = {
         function(server_name) -- default handler (optional)
-
           require("lspconfig")[server_name].setup {
             capabilities = capabilities
           }
@@ -128,14 +127,24 @@ return {
     })
 
     vim.diagnostic.config({
-        -- update_in_insert = true,
+      -- update_in_insert = true, -- Update diagnostics in Insert mode
+      -- ^ (if false, diagnostics are updated on InsertLeave)
+
+      underline = true,
+
+      virtual_text = true,
+
+      severity_sort = true, -- high -> low
+
       float = {
         focusable = false,
         style = "minimal",
         border = "rounded",
-        source = "always",
-        header = "",
-        prefix = "",
+        source = true,
+        header = { "  Diagnostics", "String" },
+        prefix = function(_, _, _)
+          return "  ", "String"
+        end,
       },
     })
   end
