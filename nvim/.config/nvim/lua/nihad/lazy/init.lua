@@ -24,9 +24,26 @@ return {
   },
   {
     'ldelossa/gh.nvim',
-    dependencies = { 
+    dependencies = {
       'ldelossa/litee.nvim'
     }
+  },
+  -- vim-tmux-navigator
+  {
+    "christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+    },
+    keys = {
+      { "<leader>th",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<leader>tj",  "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<leader>tk",  "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<leader>tl",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+    },
   },
 
   "eandrju/cellular-automaton.nvim",
@@ -34,7 +51,7 @@ return {
 
   'nvim-tree/nvim-web-devicons',
   'Hitesh-Aggarwal/feline_one_monokai.nvim',
-  'christoomey/vim-tmux-navigator',
   'lambdalisue/nerdfont.vim',
-  'junegunn/vim-easy-align'
+  'junegunn/vim-easy-align',
+  'rcarriga/nvim-notify',
 }

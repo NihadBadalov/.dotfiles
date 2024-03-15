@@ -55,12 +55,6 @@ end)
 
 vim.keymap.set("n", "<leader>zb", "viBhzf")
 
--- vim-tmux-navigator
-vim.keymap.set("n", "<leader>th", "<cmd>TmuxNavigateLeft<CR>")
-vim.keymap.set("n", "<leader>tj", "<cmd>TmuxNavigateRight<CR>")
-vim.keymap.set("n", "<leader>tk", "<cmd>TmuxNavigateUp<CR>")
-vim.keymap.set("n", "<leader>tl", "<cmd>TmuxNavigateDown<CR>")
-
 vim.keymap.set("n", "ga", "<cmd>EasyAlign<CR>")
 vim.keymap.set("v", "ga", "<cmd>'<,'>EasyAlign<CR>")
 
