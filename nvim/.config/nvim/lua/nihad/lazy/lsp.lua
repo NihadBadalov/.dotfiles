@@ -29,6 +29,8 @@ return {
         "lua_ls",
         "rust_analyzer",
         "tsserver",
+        "cssls",
+        "tailwindcss",
       },
       handlers = {
         function(server_name) -- default handler (optional)
