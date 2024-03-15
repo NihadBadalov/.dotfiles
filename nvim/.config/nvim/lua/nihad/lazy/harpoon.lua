@@ -11,7 +11,7 @@ return {
     vim.keymap.set("n", "<C-j>", function() ui.nav_file(2) end)
     vim.keymap.set("n", "<C-k>", function() ui.nav_file(3) end)
     vim.keymap.set("n", "<C-l>", function() ui.nav_file(4) end)
-    vim.keymap.set("n", "<C-K>", function()
+    vim.keymap.set("n", "<C-]>", function()
       local file_number = tonumber(vim.fn.input("File number > "), 10)
       if not file_number then return end
       ui.nav_file(file_number)
