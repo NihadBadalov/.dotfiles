@@ -22,6 +22,8 @@ vim.keymap.set("n", "<leader>svwm", function()
   require("vim-with-me").StopVimWithMe()
 end)
 
+vim.keymap.set("n", "<leader>vs", "<C-w>v")
+
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -53,7 +55,9 @@ vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
 
-vim.keymap.set("n", "<leader>zb", "viBhzf")
+vim.keymap.set("n", "<leader>zb", "$viBhzf", {
+  desc = "Fold { or ( block",
+})
 
 vim.keymap.set("n", "ga", "<cmd>EasyAlign<CR>")
 vim.keymap.set("v", "ga", "<cmd>'<,'>EasyAlign<CR>")
