@@ -55,7 +55,7 @@ vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
 
-vim.keymap.set("n", "<leader>zb", "$viBhzf", {
+vim.keymap.set("n", "zb", "$viBhzf", {
   desc = "Fold { or ( block",
 })
 
