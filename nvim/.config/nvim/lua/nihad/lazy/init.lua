@@ -11,6 +11,9 @@ return {
     end,
   },
   {
+    "github/copilot.vim",
+  },
+  {
     "Exafunction/codeium.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
