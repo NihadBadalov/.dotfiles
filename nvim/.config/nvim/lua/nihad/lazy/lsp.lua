@@ -57,6 +57,23 @@ return {
 
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
+    --- Select item next/prev, taking into account whether the cmp window is
+    --- top-down or bottoom-up so that the movement is always in the same direction.
+    local select_item_smart = function(dir, opts)
+      return function(fallback)
+        if cmp.visible() then
+          opts = opts or { behavior = cmp.SelectBehavior.Select }
+          if cmp.core.view.custom_entries_view:is_direction_top_down() then
+            ({ next = cmp.select_next_item, prev = cmp.select_prev_item })[dir](opts)
+          else
+            ({ prev = cmp.select_next_item, next = cmp.select_prev_item })[dir](opts)
+          end
+        else
+          fallback()
+        end
+      end
+    end
+
     cmp.setup({
       snippet = {
         expand = function(args)
@@ -88,8 +105,9 @@ return {
         }),
       },
       mapping = cmp.mapping.preset.insert({
-        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<C-p>'] = select_item_smart("prev", cmp_select),
+        ['<C-n>'] = select_item_smart("next", cmp_select),
+        ['<C-e>'] = cmp.mapping.close(),
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ["<C-B>"] = cmp.mapping.complete(),
         ["<C-u>"] = cmp.mapping.scroll_docs(-3),
