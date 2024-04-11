@@ -31,23 +31,6 @@ return {
       'ldelossa/litee.nvim'
     }
   },
-  -- vim-tmux-navigator
-  {
-    "christoomey/vim-tmux-navigator",
-    cmd = {
-      "TmuxNavigateLeft",
-      "TmuxNavigateDown",
-      "TmuxNavigateUp",
-      "TmuxNavigateRight",
-      "TmuxNavigatePrevious",
-    },
-    keys = {
-      { "<leader>h", "<cmd>TmuxNavigateLeft<cr>",  desc = "[tmux] Left" },
-      { "<leader>j", "<cmd>TmuxNavigateDown<cr>",  desc = "[tmux] Down" },
-      { "<leader>k", "<cmd>TmuxNavigateUp<cr>",    desc = "[tmux] Up" },
-      { "<leader>l", "<cmd>TmuxNavigateRight<cr>", desc = "[tmux] Right" },
-    },
-  },
 
   "eandrju/cellular-automaton.nvim",
   "gpanders/editorconfig.nvim",
