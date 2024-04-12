@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+# I am using zsh instead of bash.  I was having some troubles using bash with
+# arrays.  Didn't want to investigate, so I just did zsh
+pushd $DOTFILES/dotfiles
+echo $STOW_FOLDERS
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    echo "stow $folder"
+    stow -d "/home/nihad/.dotfiles/dotfiles" -t "/home/nihad" -D $folder
+    stow -d "/home/nihad/.dotfiles/dotfiles" -t "/home/nihad" --target=/home/nihad $folder
+done
+popd
