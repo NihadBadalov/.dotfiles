@@ -49,5 +49,6 @@ autocmd('LspAttach', {
     vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts("Previous diagnostic"))
     vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts("Next diagnostic"))
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts("Signature help"))
+    vim.keymap.set("n", "<leader>h", function() vim.lsp.buf.signature_help() end, opts("Signature help"))
   end
 })
