@@ -6,7 +6,7 @@ echo $STOW_FOLDERS
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
     echo "stow $folder"
-    stow -d "/home/nihad/.dotfiles/dotfiles" -t "/home/nihad" -D $folder
-    stow -d "/home/nihad/.dotfiles/dotfiles" -t "/home/nihad" --target=/home/nihad $folder
+    stow -d "$HOME/.dotfiles/dotfiles" -t "$HOME" -D $folder
+    stow -d "$HOME/.dotfiles/dotfiles" -t "$HOME" --target=$HOME $folder
 done
 popd
