@@ -30,3 +30,4 @@ vim.opt.isfname:append("@-@")
 -- https://www.reddit.com/r/vim/comments/3ql651/what_do_you_set_your_updatetime_to/
 vim.opt.updatetime = 50
 
+vim.opt.colorcolumn = "80"
