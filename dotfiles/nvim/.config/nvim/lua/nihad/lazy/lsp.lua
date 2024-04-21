@@ -93,17 +93,17 @@ return {
         max_view_entries = 20,
       },
       -- That crazy window
-      window = {
-        completion = cmp.config.window.bordered({
-          border = "single",
-          side_padding = 2,
-          col_offset = -3,
-          max_width = 80,
-        }),
-        documentation = cmp.config.window.bordered({
-          max_width = 50,
-        }),
-      },
+      -- window = {
+      --   completion = cmp.config.window.bordered({
+      --     border = "single",
+      --     side_padding = 2,
+      --     col_offset = -3,
+      --     max_width = 80,
+      --   }),
+      --   documentation = cmp.config.window.bordered({
+      --     max_width = 50,
+      --   }),
+      -- },
       mapping = cmp.mapping.preset.insert({
         ['<C-p>'] = select_item_smart("prev", cmp_select),
         ['<C-n>'] = select_item_smart("next", cmp_select),
