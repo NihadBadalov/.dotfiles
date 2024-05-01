@@ -12,6 +12,11 @@ return {
   },
   {
     "github/copilot.vim",
+    config = function()
+      -- set <leader>cpd and <leader>cpe to disable/enable copilot
+      vim.keymap.set("n", "<leader>cpe", "<cmd>Copilot enable<CR>")
+      vim.keymap.set("n", "<leader>cpd", "<cmd>Copilot disable<CR>")
+    end,
   },
   -- {
   --   "Exafunction/codeium.nvim",
