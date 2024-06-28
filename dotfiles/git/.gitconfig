@@ -17,4 +17,6 @@
 [init]
 	defaultBranch = main
 [oh-my-zsh]
-	git-commit-alias = bf713e2c112ee1f0daf10deffa1215c982513f9b
+	git-commit-alias = dd4be1b6fb9973d63eba334d8bd92b3da30b3e72
+[safe]
+	directory = /home/nihad/personal/Casio-fx-9750GIII-Programs
