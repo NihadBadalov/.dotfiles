@@ -1,0 +1,7 @@
+vars:
+  - name: message
+    value: Hello, World!
+actions:
+  - name: print_hello_world
+    action: "echo {{ message }}"
+    superuser: true

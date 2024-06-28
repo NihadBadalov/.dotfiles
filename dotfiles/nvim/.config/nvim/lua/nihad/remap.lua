@@ -62,16 +62,10 @@ vim.keymap.set("n", "zn", "$viBhzf", {
 vim.keymap.set("n", "ga", "<cmd>EasyAlign<CR>")
 vim.keymap.set("v", "ga", "<cmd>'<,'>EasyAlign<CR>")
 
+-- Keep selection in visual mode after indent
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
-vim.keymap.set("n", "<leader>h", "<cmd>TmuxNavigateLeft<cr>", { desc = "[tmux] Left" })
-vim.keymap.set("n", "<leader>j", "<cmd>TmuxNavigateDown<cr>", { desc = "[tmux] Down" })
-vim.keymap.set("n", "<leader>k", "<cmd>TmuxNavigateUp<cr>",   { desc = "[tmux] Up" })
-vim.keymap.set("n", "<leader>l", "<cmd>TmuxNavigateRight<cr>",{ desc = "[tmux] Right" })
-
--- Codeium
--- Not using anymore due to Codeium being embedded in cmp
---[[ vim.keymap.set('i', '<C-b>', function() return vim.fn['codeium#Complete']() end, { expr = true })
-vim.keymap.set('i', '<C-g><C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true }) ]]
+-- Indent with tab
+vim.keymap.set("v", "<Tab>", ">gv")
+vim.keymap.set("v", "<S-Tab>", "<gv")
