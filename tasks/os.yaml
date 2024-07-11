@@ -1,0 +1,5 @@
+actions:
+  - name: "Run script"
+    action: "cd scripts && chmod +x oscustomize && ./oscustomize"
+    superuser: true
+    ignore_errors: false
