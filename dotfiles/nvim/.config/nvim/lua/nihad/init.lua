@@ -46,8 +46,18 @@ autocmd('LspAttach', {
     vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts("View code actions"))
     vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts("Show references"))
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts("Rename"))
-    vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts("Previous diagnostic"))
-    vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts("Next diagnostic"))
+    vim.keymap.set("n", "[d", function()
+      vim.diagnostic.jump({
+        count = 1,
+        float = true,
+      })
+    end, opts("Previous diagnostic"))
+    vim.keymap.set("n", "]d", function()
+      vim.diagnostic.jump({
+        count = -1,
+        float = true,
+      })
+    end, opts("Next diagnostic"))
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts("Signature help"))
     vim.keymap.set("n", "<leader>h", function() vim.lsp.buf.signature_help() end, opts("Signature help"))
   end
