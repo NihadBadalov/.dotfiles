@@ -18,8 +18,9 @@
 [init]
 	defaultbranch = master
 [oh-my-zsh]
-	git-commit-alias = 5e59d21e5465ec0694441f41ff0acf1ddf4de187
+	git-commit-alias = 5b37e218e5275c11cb5fecc61f943e6cea3e64bf
 [commit]
 	gpgsign = true
 [gpg]
 	format = ssh
+	program = /usr/bin/gpg
