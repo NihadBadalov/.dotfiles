@@ -20,7 +20,7 @@
 [oh-my-zsh]
 	git-commit-alias = 5b37e218e5275c11cb5fecc61f943e6cea3e64bf
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	format = ssh
 	program = /usr/bin/gpg
