@@ -23,4 +23,3 @@
 	gpgsign = false
 [gpg]
 	format = ssh
-	program = /usr/bin/gpg
