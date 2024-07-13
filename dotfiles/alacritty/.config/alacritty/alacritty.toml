@@ -1,1 +1,9 @@
-#import = ["~/.config/alacritty/rose-pine-moon.toml"]
+import = ["~/.config/alacritty/mate-terminal.toml"]
+live_config_reload = true
+
+[font]
+normal = { family = "SauceCodePro Nerd Font Propo", style = "Medium" }
+# size = 11.25
+# size = 17.25
+size = 18.75
+builtin_box_drawing = true
