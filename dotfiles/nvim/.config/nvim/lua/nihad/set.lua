@@ -31,3 +31,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+-- a "C" appears when editing sql files and pressing <C-c> (sql omni completion)
+-- reddit post explaining: https://www.reddit.com/r/neovim/comments/17mcomx/deleted_by_user/
+vim.g.ftplugin_sql_omni_key = nil
