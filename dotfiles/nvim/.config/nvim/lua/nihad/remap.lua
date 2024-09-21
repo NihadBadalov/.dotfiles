@@ -57,8 +57,16 @@ vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end)
 
-vim.keymap.set("n", "zn", "$viBhzf", {
-	desc = "Fold { or ( block",
+vim.keymap.set("n", "zh", "$viBhzf", {
+	desc = "Fold { block",
+})
+
+vim.keymap.set("n", "zj", "$vi[hzf", {
+	desc = "Fold [ block",
+})
+
+vim.keymap.set("n", "zk", "$vibhzf", {
+	desc = "Fold ( block",
 })
 
 vim.keymap.set("n", "ga", "<cmd>EasyAlign<CR>")
