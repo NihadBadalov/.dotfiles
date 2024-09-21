@@ -196,3 +196,4 @@ esac
 # pnpm end
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+alias ff="fastfetch --load-config examples/10.jsonc"
