@@ -34,7 +34,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
--- vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
@@ -82,3 +82,16 @@ vim.keymap.set("v", "<S-Tab>", "<gv")
 
 -- Close window on the bottom
 vim.keymap.set("n", "<C-w>e", "<C-w>j<C-w>q")
+
+vim.keymap.set("n", "<leader>w", function()
+	vim.ui.input({ prompt = "Enter value for shiftwidth: " }, function(input)
+		vim.o.shiftwidth = tonumber(input)
+	end)
+end)
+-- vim.keymap.set("n", "<leader>tc", function()
+-- 	-- local file_number = tonumber(vim.fn.input("File number > "), 10)
+-- 	vim.fn.inputlist({
+--     "Select a theme",
+--     "1. onedark",
+--   })
+-- end)

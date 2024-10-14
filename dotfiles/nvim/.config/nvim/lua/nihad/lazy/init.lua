@@ -9,12 +9,16 @@ return {
   {
     "onsails/lspkind-nvim",
   },
+  -- {
+  --   "ziglang/zig.vim",
+  -- },
   {
     "mfussenegger/nvim-dap",
     dependencies = {
       "rcarriga/nvim-dap-ui",
       "theHamsta/nvim-dap-virtual-text",
       "nvim-neotest/nvim-nio",
+      "mfussenegger/nvim-dap-python",
     },
     config = function()
       local dap = require("dap")
@@ -69,6 +73,7 @@ return {
       }
       dap.configurations.c = dap.configurations.cpp
       dap.configurations.rust = dap.configurations.cpp
+      require("dap-python").setup("python")
 
       vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint)
       vim.keymap.set("n", "<leader>gb", dap.run_to_cursor)
@@ -168,7 +173,6 @@ return {
 
   -- Useful for getting pretty icons, but requires a Nerd Font.
   { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
-  "Hitesh-Aggarwal/feline_one_monokai.nvim",
   "lambdalisue/nerdfont.vim",
   "junegunn/vim-easy-align",
   "rcarriga/nvim-notify",

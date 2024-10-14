@@ -5,5 +5,6 @@ live_config_reload = true
 normal = { family = "SauceCodePro Nerd Font Propo", style = "Medium" }
 # size = 11.25
 # size = 17.25
-size = 18.75
+# 8 clicks is -6 from the value wtf?!?!?
+size = 12.75
 builtin_box_drawing = true
