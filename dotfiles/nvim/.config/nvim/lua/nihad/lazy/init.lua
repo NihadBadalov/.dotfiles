@@ -116,40 +116,41 @@ return {
       require("oil").setup()
     end,
   },
-  {
-    -- https://github.com/zbirenbaum/copilot.lua
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
-        panel = {
-          keymap = {
-            jump_prev = "]]",
-            jump_next = "[[",
-            accept = "<Tab>",
-            refresh = "gr",
-            open = "<M-]>",
-          },
-        },
-        suggestion = {
-          auto_trigger = true,
-          keymap = {
-            accept = "<M-Tab>",
-          },
-        },
-      })
-      -- vim.keymap.set("n", "<leader>cpe", "<cmd>Copilot enable<CR>")
-      -- vim.keymap.set("n", "<leader>cpd", "<cmd>Copilot disable<CR>")
-    end,
-  },
-  -- 	"github/copilot.vim",
-  -- 	config = function()
-  -- 		-- set <leader>cpd and <leader>cpe to disable/enable copilot
-  -- 		vim.keymap.set("n", "<leader>cpe", "<cmd>Copilot enable<CR>")
-  -- 		vim.keymap.set("n", "<leader>cpd", "<cmd>Copilot disable<CR>")
-  -- 	end,
+  -- {
+  --   -- https://github.com/zbirenbaum/copilot.lua
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("copilot").setup({
+  --       panel = {
+  --         keymap = {
+  --           jump_prev = "]]",
+  --           jump_next = "[[",
+  --           accept = "<Tab>",
+  --           refresh = "gr",
+  --           open = "<M-]>",
+  --         },
+  --       },
+  --       suggestion = {
+  --         auto_trigger = true,
+  --         keymap = {
+  --           accept = "<M-Tab>",
+  --         },
+  --       },
+  --     })
+  --     -- vim.keymap.set("n", "<leader>cpe", "<cmd>Copilot enable<CR>")
+  --     -- vim.keymap.set("n", "<leader>cpd", "<cmd>Copilot disable<CR>")
+  --   end,
   -- },
+  {
+  	"github/copilot.vim",
+  	config = function()
+  		-- set <leader>cpd and <leader>cpe to disable/enable copilot
+  		vim.keymap.set("n", "<leader>cpe", "<cmd>Copilot enable<CR>")
+  		vim.keymap.set("n", "<leader>cpd", "<cmd>Copilot disable<CR>")
+  	end,
+  },
   -- {
   --   "Exafunction/codeium.nvim",
   --   dependencies = {

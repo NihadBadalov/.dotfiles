@@ -1,6 +1,6 @@
 function ColorMyPencils(color)
 	-- color = color or "rose-pine"
-	color = color or "onedark" or "rose-pine" or "tokyonight-night"
+	color = color or "tokyonight-storm" or "rose-pine" or "tokyonight-night"
 	vim.cmd.colorscheme(color)
 
 	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -17,50 +17,6 @@ function ColorMyPencils(color)
 end
 
 return {
-	{
-		"zaldih/themery.nvim",
-		opts = {
-			themes = {
-				"onedark",
-
-				"tokyonight-night",
-				"tokyonight-storm",
-				"tokyonight-day",
-				"tokyonight-moon",
-
-				"rose-pine-main",
-				"rose-pine-moon",
-				"rose-pine-dawn",
-
-				"catppuccin-latte",
-				"catppuccin-frappe",
-				"catppuccin-macchiato",
-				"catppuccin-mocha",
-			}, -- Your list of installed colorschemes.
-			livePreview = true, -- Apply theme while picking. Default to true.
-		},
-		keys = {
-			{
-				"<leader>tc",
-				"<cmd>Themery<CR>",
-				desc = "Themery",
-				mode = { "n" },
-			},
-		},
-	},
-	{
-		"navarasu/onedark.nvim",
-		priority = 1000,
-		config = function()
-			-- Lua
-			require("onedark").setup({
-				style = "light",
-				ending_tildes = true,
-				toggle_style_key = "<leader>ts",
-			})
-			require("onedark").load()
-		end,
-	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",

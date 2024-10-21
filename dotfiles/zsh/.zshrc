@@ -81,24 +81,10 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 plugins=(
-  evalcache
-  git
-  dotenv
-  rake
-  aliases
-  bun
-  composer
-  dotenv
   fzf
-  gh
-  git-commit
-  nmap
-  npm
-  # nvm
-  # pyenv
-  rust
-  tmux
   zsh-autosuggestions
+  tmux
+  keychain
 )
 #zsh-autosuggestions
 #zsh-syntax-highlighting
@@ -197,3 +183,13 @@ esac
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias ff="fastfetch --load-config examples/10.jsonc"
+
+# File/Directory Operations
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'

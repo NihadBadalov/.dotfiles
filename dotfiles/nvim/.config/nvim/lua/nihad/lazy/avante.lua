@@ -33,6 +33,10 @@ return {
           suggestion = "<leader>As",
         },
       },
+      behaviour = {
+        auto_suggestions = false,
+      },
+      hints = { enabled = false },
     },
     branch = "main",
     -- commit = "ff316f91101fcc328d1e7879ab1bf26a055c2745",
@@ -45,7 +49,7 @@ return {
       "MunifTanjim/nui.nvim",
       --- The below dependencies are optional,
       "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      "zbirenbaum/copilot.lua",   -- for providers='copilot'
+      -- "zbirenbaum/copilot.lua",   -- for providers='copilot'
       {
         -- support for image pasting
         "HakonHarnes/img-clip.nvim",

@@ -1,6 +1,9 @@
 import = ["~/.config/alacritty/mate-terminal.toml"]
 live_config_reload = true
 
+[window]
+opacity = 0.8
+
 [font]
 normal = { family = "SauceCodePro Nerd Font Propo", style = "Medium" }
 # size = 11.25
